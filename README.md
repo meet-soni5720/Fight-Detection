@@ -9,9 +9,9 @@ In this project we have used two approaches to solve the problem
 
   <h1> USING CRNN:- </h1>
       CNNs are better at recognizing the basic and high level features of an image and Recurrent networks works well with time dependent data or sequential data, so we tried to leverage the power of both the networks to predict the fight in the video.
-      The basic flowchart is as follows:
+      <h3>The basic flowchart is as follows:</h3><br>
       <p>
-            1) We have used pretrained cnn model to encode the predefined number of frames of a video and encoded it in a feature map, so basically CNN model is acting as an encoder network in the architecture. We have used Resnet152 architecture pretrained on imagenet dataset to as an encoder network to generate the feature vectors.<br>
+            1) We have used pretrained cnn model to encode the predefined number of frames of a video and encoded it in a feature map, so basically CNN model is acting as an encoder network in the architecture. We have used Resnet152 architecture pretrained on imagenet dataset to as an encoder network to generate the feature vectors.<br><br>
             2) Training a RNN model on a feature vectors to get the prediction, the best choices for this are unidirectional/bidirectional LSTM or GRU units, as bidirectional LSTM/GRU are computationally expensive as compared to unidirectional LSTM/GRU and also we are not getting significant accuracy boost, so we have used unidirectional LSTM architecture with 2 hidden layer and two dense layer.here RNN model is acting as decoder which decodes the featuremap of different map to binary classes fight and non-fight.</p>
                              <p>   <h1>General Architecture</h1>  </p>
                                  <p align="center" margin-top="20">
