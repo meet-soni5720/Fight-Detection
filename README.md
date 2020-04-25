@@ -14,5 +14,5 @@ In this project we have used two approaches to solve the problem
             2) Training a RNN model on a feature vectors to get the prediction, the best choices for this are unidirectional/bidirectional LSTM or GRU units, as bidirectional LSTM/GRU are computationally expensive as compared to unidirectional LSTM/GRU and also we are not getting significant accuracy boost, so we have used unidirectional LSTM architecture with 2 hidden layer and two dense layer.here RNN model is acting as decoder which decodes the featuremap of different map to binary classes fight and non-fight.
                                 General Architecture
                                  <p align="center" margin-top="20">
-                                          <img src="images_for_readme/crnn_overview.png">
+                                          <img src="images_for_readme/crnn.png">
                                   </p>
