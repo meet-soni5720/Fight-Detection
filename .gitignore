@@ -1,9 +1,8 @@
 private.txt
-images/
 posenet-python/
-Scraped Videos/
 Real Life Violence Dataset
 real life violence situations
 *.zip
 .ipynb_checkpoints
 .git
+Scraped Videos
