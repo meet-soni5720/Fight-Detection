@@ -41,11 +41,7 @@ PoseNet can be used to estimate either a single pose or multiple poses. The mode
       <p align="center" margin-top="20">
       <img src="images_for_readme/pose.jpg">
   </p>
- <h1>Set-Up </h1>
- <ul>
-  <li>sign up on https://www.sms4india.com/.</li>
-   <li>get API&Secret keys </li>
-</ul>
+
 
 <p align="center" margin-top="20">
   <img src="images_for_readme/pose.png">
@@ -58,4 +54,8 @@ Removing the background from this results in a much more simplified output that 
 <p align="center" margin-top="20">
 <img src="images_for_readme/pose.jpg">
 </p>
-
+ <h1>Set-Up </h1>
+ <ul>
+  <li>sign up on https://www.sms4india.com/.</li>
+   <li>get API&Secret keys </li>
+</ul>
