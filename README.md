@@ -24,11 +24,15 @@ In this project we have used two approaches to solve the problem
       <img src="images_for_readme/pose_estimation.gif">
   </p>
   
+  <p>
   PoseNet can be used to estimate either a single pose or multiple poses. The model overlays keypoints over the input image.
+  </p>
     <p align="center" margin-top="20">
       <img src="images_for_readme/pose.png">
   </p>
+  <p>
   Removing the background from this results in a much more simplified output that can be given to a CNN to get prediction:
+   </p>
       <p align="center" margin-top="20">
       <img src="images_for_readme/pose.jpg">
   </p>
