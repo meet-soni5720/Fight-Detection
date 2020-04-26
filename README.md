@@ -17,3 +17,19 @@ In this project we have used two approaches to solve the problem
                                  <p align="center" margin-top="20">
                                           <img src="images_for_readme/crnn.png">
                                   </p>
+                                  
+  <h1> USING POSENET<h1>
+  
+  <p align="center" margin-top="20">
+      <img src="images_for_readme/pose_estimation.gif">
+  </p>
+  
+  PoseNet can be used to estimate either a single pose or multiple poses. The model overlays keypoints over the input image.
+    <p align="center" margin-top="20">
+      <img src="images_for_readme/pose.png">
+  </p>
+  Removing the background from this results in a much more simplified output that can be given to a CNN to get prediction:
+      <p align="center" margin-top="20">
+      <img src="images_for_readme/pose.jpg">
+  </p>
+      
