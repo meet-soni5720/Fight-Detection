@@ -17,7 +17,7 @@ def sendPostRequest(reqUrl, apiKey, secretKey, useType, phoneNo, senderId, textM
 
 # get response
 def main():
-    response = sendPostRequest(URL, 'Y0CRJP21JW1CEOE9MNKJ2PD1U2RQKMDC', 'XD326W5W51BT16D4', 'stage', '9925335903', 'Meet', 'message-text' )
+    response = sendPostRequest(URL, 'type_your_api_key', 'type_your_secret_key', 'stage', '9925335903', 'Meet', 'message-text' )
 """
   Note:-
     you must provide apikey, secretkey, usetype, mobile, senderid and message values
