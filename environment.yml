@@ -1,0 +1,13 @@
+name: deeplab4
+channels:
+  - defaults
+dependencies:
+  - tensorflow=1.14
+  - tensorflow_serving_api
+  - pillow
+  - matplotlib
+  - google-api-core-grpc
+  - jupyter
+  - opencv
+prefix: /home/yatin/anaconda3/envs/deeplab4
+
