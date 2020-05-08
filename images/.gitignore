@@ -1,4 +1,5 @@
-NonViolence
-Violence
+*
+*/
+!*.py
 !.gitignore
 !README.md
