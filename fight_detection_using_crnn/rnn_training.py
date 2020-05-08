@@ -1,18 +1,19 @@
 import os
-import numpy as np
-import tensorflow as tf
-from tensorflow import keras
-from tensorflow.keras.layers import Dense,BatchNormalization,Bidirectional,LSTM,Dropout,Conv2D,AveragePooling2D,Flatten,Input
-from tensorflow.keras.models import Model,load_model,save_model,Sequential
-from tensorflow.keras.callbacks import ReduceLROnPlateau,ModelCheckpoint
-from tensorflow.keras.optimizers import Adam
 import glob
 import tqdm
 import pickle
+import numpy as np
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras.optimizers import Adam
+
 from keras import backend as K
 from tensorflow.keras import regularizers
 import matplotlib.pyplot as plt
 import argparse
+from tensorflow.keras.callbacks import ReduceLROnPlateau,ModelCheckpoint
+from tensorflow.keras.models import Model,load_model,save_model,Sequential
+from tensorflow.keras.layers import Dense,BatchNormalization,Bidirectional,LSTM,Dropout,Conv2D,AveragePooling2D,Flatten,Input
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-d','--dataset',required=True,
@@ -84,3 +85,15 @@ plt.plot(epochs, val_loss, 'r', label='validation loss')
 plt.title('Training and Validation loss')
 plt.legend(loc = 'upper right')
 plt.show()
+
+
+
+# def cnn_model():
+#   model = Sequential()
+#   model.add(Conv2D(64, kernel_size=3, activation=’relu’, input_shape=(244,244,4)))
+#   model.add(Conv2D(32, kernel_size=3, activation=’relu’))
+#   model.add(Flatten())
+#   model.add(Dense(1, activation='sigmoid'))
+#   model.summary()
+#   model.compile(optimizer=Adam(lr=0.005,decay=1e-6),loss='binary_crossentropy',metrics=['accuracy'])
+#   return model

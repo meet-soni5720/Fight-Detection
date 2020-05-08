@@ -1,8 +1,3 @@
-''' to run the file type
-    python test.py -m 'path-to-model' 
-   ex:- python test.py -m D:/Downloads/fd_v2.h5 
-    in command lin'''
-
 import sys
 import os
 import numpy as np 
@@ -65,40 +60,6 @@ print("Encoder Model prepared....")
 #Decoder Network(laoding trained model)
 decoder_network = load_model(args['modelPath'],compile=False)
 print("Decoder network prepared.....")
-
-# class VideoStream:
-#     def __init__(self,queueSize=256):
-#         self.stream = cv2.VideoCapture(0)
-#         self.stopped = False
-#         self.Q = Queue(maxsize = queueSize)
-        
-#     def start(self):
-#         t = threading.Thread(target=self.update,args=())
-#         t.daemon = True
-#         t.start()
-#         return self
-
-#     def update(self):
-#         while True:
-#             if self.stopped:
-#                 return
-#             if not self.Q.full():
-#                 (grabbed, frame) = self.stream.read()
-            
-#                 if not grabbed:
-#                     self.stop()
-#                     return
-            
-#                 self.Q.put(frame)
-
-#     def read(self):
-#         return self.Q.get()
-
-#     def more(self):
-#         return self.Q.qsize() > 0
-
-#     def stop(self):
-#         self.stopped = True
 
 def main(encoder_model,decoder_network):
     vs = cv2.VideoCapture(0)

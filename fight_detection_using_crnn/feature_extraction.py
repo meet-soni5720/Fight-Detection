@@ -1,13 +1,14 @@
 import os
+import tqdm
 import numpy as np
+from PIL import Image
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras.layers import Dense,BatchNormalization,Bidirectional,LSTM,Dropout,Conv2D,AveragePooling2D,Flatten
-from tensorflow.keras.models import Model,load_model,save_model,Sequential
-from tensorflow.keras.callbacks import ReduceLROnPlateau,ModelCheckpoint
 from tensorflow.keras.applications.resnet import ResNet152
-from PIL import Image
-import tqdm
+from tensorflow.keras.callbacks import ReduceLROnPlateau,ModelCheckpoint
+from tensorflow.keras.models import Model,load_model,save_model,Sequential
+from tensorflow.keras.layers import Dense,BatchNormalization,Bidirectional,LSTM,Dropout,Conv2D,AveragePooling2D,Flatten
+
 
 os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'
 physical_devices = tf.config.experimental.list_physical_devices('GPU')
@@ -39,7 +40,7 @@ class Dataloader:
     def get_frame_sequence(self,path):
         flag = 1
         total_frames = os.listdir(path)
-        arr = np.zeros((224,224,3,40))
+        arr = np.zeros((224,224,3,40)) # for 40 frames
         if len(total_frames) >= 160:
             counter = 0
             for i in range(1,160,4):
