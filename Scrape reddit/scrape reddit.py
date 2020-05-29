@@ -5,7 +5,6 @@ import pickle
 import requests 
 import pandas as pd
 import datetime as dt
-from urllib.request import urlretrieve
 
 with open('credentials.txt') as f:
 	PERSONAL_USE_SCRIPT_14_CHARS = f.readline().rstrip("\n")
@@ -74,6 +73,6 @@ for i in range(len(vids)):
 
 	if not os.path.exists(PATH + names[i]):
 		with open(PATH + names[i],'wb') as video: 
-				video.write(r.content)
-				print(names[i])
+			video.write(r.content)
+			print(names[i])
 
