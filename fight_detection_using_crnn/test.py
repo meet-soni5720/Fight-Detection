@@ -118,7 +118,7 @@ def main(encoder_model,decoder_network):
     while True:
         grabbed,frame = vs.read()
         frame_1 = cv2.resize(frame,(224,224),interpolation = cv2.INTER_NEAREST)
-        f_x = np.array(frame_1)
+        f_x = np.array(frame_1)/255
         f_x = np.expand_dims(f_x,axis = 0)
         feature_map = encoder_model.predict(f_x)
         x_rnn[counter,:] = np.array(feature_map)
@@ -130,7 +130,7 @@ def main(encoder_model,decoder_network):
             x_test = np.expand_dims(x_rnn,axis=0)
             y_val = decoder_network.predict(x_test)
             print(y_val)
-            if(y_val >= 0.02):
+            if(y_val >= 0.3):
                 class_val = 1
             else:
                 class_val = 0
