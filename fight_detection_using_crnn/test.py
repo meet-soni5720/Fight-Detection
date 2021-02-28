@@ -145,7 +145,7 @@ def main(encoder_model,decoder_network):
             x_test = np.expand_dims(x_rnn,axis=0)
             y_val = decoder_network.predict(x_test)
             print(y_val)
-            if(y_val >= 0.02):
+            if(y_val >= 0.3):
                 class_val = 1
             else:
                 class_val = 0
