@@ -31,7 +31,9 @@ In this project we have used two approaches to solve the problem
 </ul>
   <h2> Project demo video </h2>
   <p>https://drive.google.com/file/d/1EovOeSgtOsyhsiSE1K91q0ddIgYLmdbx/view?usp=sharing</p> <br><br>
-                                  
+   
+  <h3> Note: some issues with model weights given in fight_detection_using_crnn folder, so if it doesn't work visit the link: https://drive.google.com/file/d/1S_bBYflp1bFBM1EtLxk4nhQ7adn1UjW_/view?usp=sharing to download the weight files. </h3>
+  
 <h1> USING POSENET</h1>
 
 <p align="center" margin-top="20">
